@@ -30,7 +30,10 @@
 
 {{ with .Site.Params.favicon }}
     <link rel="shortcut icon" href="{{ . | relURL }}" />
-{{ end }}
+    <link rel="icon" type="image/png" sizes="96x96" href="{{ . | relURL }}"/>
+    <link rel="icon" type="image/png" sizes="512x512" href="{{ . | relURL }}"/>
+    <link rel="icon" type="image/png" sizes="192x192" href="{{ . | relURL }}"/>
+{{ end }} 
 
 {{- template "_internal/google_analytics.html" . -}}
 {{- partial "head/custom.html" . -}}
